@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Product List</h1>
+      <h1 className="text-danger">Product List</h1>
       {data.map((category, index) => (
         <div key={index}>
           <h2>{category.name}</h2>
