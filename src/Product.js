@@ -14,7 +14,7 @@ const Product = ({ product, onAddToCart, onRemoveFromCart }) => {
   return (
     <div className="card" style={{ width: "18rem" }}>
       <div className="card-body">
-        <h5 className="card-title text-success">{name}</h5>
+        <h5 className="card-title text-dark">{name}</h5>
         <p className="card-text">Price: ${price}</p>
         <div className="d-grid gap-2 col-12 mx-auto">
           <button className="btn btn-primary" onClick={handleAddToCart}>

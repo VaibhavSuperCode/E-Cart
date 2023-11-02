@@ -2,23 +2,33 @@ import React from "react";
 
 const Cart = ({ cart, onRemoveFromCart }) => {
   return (
-    <div className="card" style={{ width: "18rem" }}>
-      <div className="card-body">
-        <h5 className="card-title">Cart</h5>
-        <ul className="list-group">
+    <div>
+      <h5 className="card-title">Cart</h5>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
           {cart.map((product, index) => (
-            <li className="list-group-item" key={index}>
-              {product.name} - ${product.price}
-              <button
-                className="btn btn-danger"
-                onClick={() => onRemoveFromCart(product)}
-              >
-                Remove from Cart
-              </button>
-            </li>
+            <tr key={index}>
+              <td>{product.name}</td>
+              <td>{product.price}</td>
+              <td>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => onRemoveFromCart(product)}
+                >
+                  Remove from Cart
+                </button>
+              </td>
+            </tr>
           ))}
-        </ul>
-      </div>
+        </tbody>
+      </table>
     </div>
   );
 };

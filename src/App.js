@@ -27,10 +27,10 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="text-danger">Product List</h1>
+      <h1 className="text-danger text-center">Product List</h1>
       {data.map((category, index) => (
         <div key={index}>
-          <h2>{category.name}</h2>
+          <h2 className="text-success">{category.name}</h2>
           <div className="row">
             {category.productList.map((product, productIndex) => (
               <div className="col-md-4" key={productIndex}>
