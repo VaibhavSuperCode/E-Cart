@@ -10,7 +10,7 @@ function App() {
 
   const handleAddToCart = (product) => {
     setCart([...cart, product]);
-    console.log(`Product ${product.name} Added to the cart.`);
+    console.log(`Product ${product.name} is Added to the cart.`);
     console.log("List of products in the cart array:", [...cart, product]);
   };
 
@@ -20,7 +20,7 @@ function App() {
     if (index !== -1) {
       const updatedCart = [...cart.slice(0, index), ...cart.slice(index + 1)];
       setCart(updatedCart);
-      console.log("Product removed from the cart.");
+      console.log(`Product ${product.name} is Removed from the cart.`);
       console.log("List of products in the cart array:", updatedCart);
     }
   };
